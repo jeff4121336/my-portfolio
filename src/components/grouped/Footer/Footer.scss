@@ -1,0 +1,26 @@
+@use "../../../index.scss" as *;
+
+.footer {
+  background-color: $secondary-bgColor;
+  color: rgb(168, 168, 168);
+  font-size: $sub-text-size-4;
+  padding: 2vh 4vw !important;
+  .icons-row {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    padding: 18px 0;
+    .col {
+      display: flex;
+      justify-content: center;
+      svg {
+        margin-left: 16px;
+      }
+    }
+  }
+  .text-row {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 25px 0px;
+  }
+}

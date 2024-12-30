@@ -1,0 +1,47 @@
+@use "../../../index.scss" as *;
+
+.macbox-container {
+  position: relative;
+  max-width: 450px !important;
+  font-size: 0.7em;
+  .overlay {
+    position: absolute;
+    top: 47%;
+    text-align: center;
+  }
+  button {
+    background-color: $callToAction-bgColor;
+    border: 1px solid black;
+    border-radius: 3%;
+    width: auto;
+    &.macbox-play {
+      margin-left: 3%;
+    }
+  }
+  .mcontainer {
+    position: absolute;
+    display: center;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+  }
+  iframe {
+    overflow: hidden;
+    position: absolute;
+    top: 15%;
+    left: 17%;
+    width: 65%;
+    height: 65%;
+  }
+}
+
+.macbox-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.sliderClass {
+  position: absolute;
+  top: 10%;
+}

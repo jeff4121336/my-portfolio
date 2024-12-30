@@ -1,0 +1,123 @@
+.about {
+  padding: 5vh 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(33, 37, 41);
+}
+@media (min-width: 767px) {
+  .about {
+    display: none;
+  }
+}
+.about .about-mobile-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-size: 0.8rem;
+  margin: 4px 0;
+  background-color: #151515;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  padding: 5% 0;
+  text-align: center;
+  width: 90vw;
+}
+.about .about-mobile-row ul {
+  text-align: left;
+}
+.about .slider .title {
+  text-align: center;
+  font-size: 1rem;
+}
+.about .slider .slider-row {
+  padding: 1rem 0;
+}
+
+.about-desktop {
+  max-width: 90vw;
+  background-color: rgb(33, 37, 41);
+}
+.about-desktop .square,
+.about-desktop .rectangle {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  color: #ffffff;
+  border: 1.5px solid #000000;
+  border-radius: 12px;
+  padding: 0px !important;
+  text-align: center;
+}
+.about-desktop .square:hover,
+.about-desktop .rectangle:hover {
+  box-shadow: 6px 6px 10px rgba(128, 128, 128, 0.3);
+}
+.about-desktop .square img,
+.about-desktop .rectangle img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about-desktop .square ul,
+.about-desktop .rectangle ul {
+  margin: 30px 0;
+  text-align: left;
+}
+.about-desktop .square {
+  height: calc(150px + 2vw);
+  width: calc(150px + 2vw);
+}
+.about-desktop .square .flipFlexBox {
+  width: 100% !important;
+  height: 100%;
+  min-width: 150px;
+  min-height: 150px;
+  padding: 0px !important;
+  perspective: 1000px;
+}
+.about-desktop .square .fleximg {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about-desktop .square .flipFlexBoxInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.about-desktop .square .flipFlexBox:hover .flipFlexBoxInner {
+  transform: rotateY(180deg);
+}
+.about-desktop .square .front,
+.about-desktop .square .back {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Safari */
+  backface-visibility: hidden;
+}
+.about-desktop .square .front {
+  color: white;
+}
+.about-desktop .square .back {
+  color: white;
+  transform: rotateY(180deg);
+}
+.about-desktop .rectangle {
+  height: calc(150px + 2vw);
+}
+@media (max-width: 767px) {
+  .about-desktop {
+    display: none;
+  }
+}/*# sourceMappingURL=BentoBox.css.map */

@@ -1,0 +1,63 @@
+@use "../../../index.scss" as *;
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  min-height: 95vh;
+  .text {
+    display: flex;
+    justify-content: flex-start;
+    &.main-text {
+      font-size: $main-text-size-2;
+      color: $main-text-color;
+    }
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 3vw;
+    .navMacboxBtn {
+      height: 30px;
+      width: 30px;
+      margin: 0px 10px;
+      background-color: #fcf2e5;
+    }
+  }
+  .sub-text {
+    display: flex;
+    align-items: center;
+    font-size: $sub-text-size-3;
+    color: $sub-text-color;
+  }
+
+  @media (max-width: $large-width) {
+    .row {
+      .macbox {
+        flex: 1 2 auto;
+      }
+      .main-text {
+        font-size: $main-text-size-3;
+      }
+      .sub-text {
+        font-size: $sub-text-size-3;
+        padding-bottom: 5vh;
+      }
+      .navMacboxBtn {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: $phone-width) {
+    .row {
+      .main-text {
+        font-size: $main-text-size-4;
+      }
+      .sub-text {
+        font-size: $sub-text-size-4;
+      }
+    }
+  }
+}

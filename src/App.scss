@@ -1,0 +1,7 @@
+@use "./index.scss" as *;
+
+#root {
+  height: 100vh;
+  background-color: $primary-bgColor;
+  overflow: auto;
+}

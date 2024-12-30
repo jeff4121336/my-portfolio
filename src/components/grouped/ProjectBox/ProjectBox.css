@@ -1,0 +1,56 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  min-height: 95vh;
+}
+.project .text {
+  display: flex;
+  justify-content: flex-start;
+}
+.project .text.main-text {
+  font-size: 36px;
+  color: #000000;
+}
+.project .btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 3vw;
+}
+.project .btn .navMacboxBtn {
+  height: 30px;
+  width: 30px;
+  margin: 0px 10px;
+  background-color: #fcf2e5;
+}
+.project .sub-text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #545454;
+}
+@media (max-width: 1024px) {
+  .project .row .macbox {
+    flex: 1 2 auto;
+  }
+  .project .row .main-text {
+    font-size: 24px;
+  }
+  .project .row .sub-text {
+    font-size: 14px;
+    padding-bottom: 5vh;
+  }
+  .project .row .navMacboxBtn {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .project .row .main-text {
+    font-size: 16px;
+  }
+  .project .row .sub-text {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=ProjectBox.css.map */

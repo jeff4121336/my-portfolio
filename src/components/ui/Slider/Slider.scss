@@ -1,0 +1,12 @@
+@use "../../../index.scss" as *;
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  .slides {
+    display: block;
+    img {
+      object-fit: fill;
+    }
+  }
+}

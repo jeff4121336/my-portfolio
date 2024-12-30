@@ -1,0 +1,39 @@
+.hero-frame {
+  height: 100vh;
+  background-color: #fbf9f5;
+}
+
+.nav-frame {
+  top: 0;
+  position: sticky;
+  z-index: 100;
+}
+
+.bentobox-frame {
+  position: relative;
+  height: 100%;
+  background-color: rgb(33, 37, 41);
+}
+.bentobox-frame .bento-bg {
+  position: absolute;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.project-frame {
+  height: auto;
+  padding: 2vh 2vw;
+  background-color: #fbf9f5;
+}
+
+.footer-frame {
+  width: 100%;
+  height: auto;
+  padding: 1vh 2vw 0 0;
+  background-color: rgb(33, 37, 41);
+}/*# sourceMappingURL=Home.css.map */

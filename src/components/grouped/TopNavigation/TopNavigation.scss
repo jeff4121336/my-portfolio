@@ -1,0 +1,60 @@
+@use "../../../index.scss" as *;
+$animationTime: 0.45s;
+
+.top-nav {
+  //   top: 0;
+  width: 100%;
+  //   position: sticky;
+  //   z-index: 100;
+  height: auto;
+  background-color: #ffffff;
+  padding: 6px;
+  transition: background-color $animationTime;
+
+  &.dark-mode {
+    background-color: #151515 !important;
+    transition: background-color $animationTime;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .text-column {
+      height: 100%;
+      margin-left: 20px;
+      .main-text {
+        font-size: 0.95rem;
+        color: $main-text-color;
+        transition: color $animationTime;
+        &.dark-mode {
+          color: $dark-mode-text-color;
+          transition: color $animationTime;
+        }
+      }
+      .sub-text {
+        font-size: 0.6rem;
+        color: $sub-text-color;
+      }
+    }
+
+    .btn-column {
+      display: flex;
+      margin-left: 6vw;
+      max-width: 600px;
+      justify-content: space-evenly;
+      align-items: center;
+
+      @media (max-width: $tablet-width) {
+        margin-left: 0px;
+        padding: 0px 4px 0px 0px;
+        justify-content: space-between;
+        max-width: 50vw;
+      }
+      @media (max-width: $phone-width) {
+        display: none;
+      }
+    }
+  }
+}

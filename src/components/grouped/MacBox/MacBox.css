@@ -1,0 +1,19 @@
+.macbox-container {
+  position: relative;
+  max-width: 450px !important;
+}
+
+.macbox-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.7em;
+}/*# sourceMappingURL=MacBox.css.map */

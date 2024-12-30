@@ -1,0 +1,140 @@
+@use "../../../index.scss" as *;
+$color: #ffffff;
+$bgcolor: #151515;
+$bdcolor: #000000;
+$bdcolorborder: 12px;
+
+// moblie css
+.about {
+  padding: 5vh 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // 水平置中
+  align-items: center;
+  background-color: $secondary-bgColor;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  .about-mobile-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 0.8rem;
+    margin: 4px 0;
+    background-color: $bgcolor;
+    color: $color;
+    border: 1px solid $bdcolor;
+    border-radius: $bdcolorborder;
+    padding: 5% 0;
+    text-align: center;
+    width: 90vw;
+    ul {
+      text-align: left;
+    }
+  }
+
+  .slider {
+    .title {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .slider-row {
+      padding: 1rem 0;
+    }
+  }
+}
+
+// desktop css
+.about-desktop {
+  max-width: 90vw;
+  background-color: $secondary-bgColor;
+  //   display: none;
+
+  .square,
+  .rectangle {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgcolor;
+    color: $color;
+    border: 1.5px solid $bdcolor;
+    border-radius: $bdcolorborder;
+    padding: 0px !important;
+    text-align: center;
+    &:hover {
+      box-shadow: 6px 6px 10px rgba(128, 128, 128, 0.3);
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    ul {
+      margin: 30px 0;
+      text-align: left;
+    }
+  }
+  .square {
+    height: calc(150px + 2vw);
+    width: calc(150px + 2vw);
+
+    .flipFlexBox {
+      width: 100% !important;
+      height: 100%;
+      min-width: 150px;
+      min-height: 150px;
+      padding: 0px !important;
+      perspective: 1000px;
+    }
+
+    .fleximg {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .flipFlexBoxInner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flipFlexBox:hover .flipFlexBoxInner {
+      transform: rotateY(180deg);
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    .front {
+      //   background-color: $flexBoxColor;
+      color: white;
+    }
+
+    .back {
+      //   background-color: $flexBoxColor;
+      color: white;
+      transform: rotateY(180deg);
+    }
+  }
+  .rectangle {
+    height: calc(150px + 2vw);
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
