@@ -1,7 +1,20 @@
 @use "./index.scss" as *;
+@import "../node_modules/animate.css";
 
 #root {
   height: 100vh;
   background-color: $primary-bgColor;
   overflow: auto;
+  font-family: "ABeeZee", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+@font-face {
+  font-family: "ABeeZee";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/abeezee/v22/esDR31xSG-6AGleN6tI.ttf")
+    format("truetype");
 }

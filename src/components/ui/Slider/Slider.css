@@ -1,14 +1,11 @@
-.each-slide-effect > div {
+.slider {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  height: 350px;
+  flex-direction: column;
 }
-
-.each-slide-effect span {
-  padding: 20px;
-  font-size: 20px;
-  background: #efefef;
-  text-align: center;
+.slider .slides {
+  display: block;
+}
+.slider .slides img {
+  -o-object-fit: fill;
+     object-fit: fill;
 }/*# sourceMappingURL=Slider.css.map */

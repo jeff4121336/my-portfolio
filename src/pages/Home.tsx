@@ -1,12 +1,11 @@
 import "./Home.scss";
-import React, { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import { useIntersectionObserver } from "../components/hooks/useIntersectionObserver";
 import TopNavigation from "../components/grouped/TopNavigation/TopNavigation";
 import Hero from "../components/grouped/Hero/Hero";
 import BentoBox from "../components/grouped/BentoBox/BentoBox";
 import ProjectBox from "../components/grouped/ProjectBox/ProjectBox";
 import Footer from "../components/grouped/Footer/Footer";
-import { macboxProj1_1, macboxProj1_2, macboxProj1_3 } from "../assets";
 
 function Home() {
   const bentoRef = useRef<HTMLDivElement>(null);
@@ -19,7 +18,7 @@ function Home() {
 
   const navCallback: IntersectionObserverCallback = (entries) => {
     const nav = document.querySelector(".top-nav") as HTMLDivElement;
-    const root = document.querySelector("#root") as HTMLDivElement;
+    // const root = document.querySelector("#root") as HTMLDivElement;
     entries.forEach((entry) => {
       if (
         entry.isIntersecting &&
@@ -29,23 +28,23 @@ function Home() {
         nav.querySelectorAll("*").forEach((child) => {
           (child as HTMLDivElement).classList.add("dark-mode");
         });
-        setTimeout(() => {
-          root.style.overflow = "hidden";
-          setTimeout(() => {
-            root.style.overflow = "auto";
-          }, 150);
-        }, 5);
+        // setTimeout(() => {
+        //   root.style.overflow = "hidden";
+        //   setTimeout(() => {
+        //     root.style.overflow = "auto";
+        //   }, 150);
+        // }, 5);
       } else {
         nav.classList.remove("dark-mode");
         nav.querySelectorAll("*").forEach((child) => {
           (child as HTMLDivElement).classList.remove("dark-mode");
         });
-        setTimeout(() => {
-          root.style.overflow = "hidden";
-          setTimeout(() => {
-            root.style.overflow = "auto";
-          }, 150);
-        }, 5);
+        // setTimeout(() => {
+        //   root.style.overflow = "hidden";
+        //   setTimeout(() => {
+        //     root.style.overflow = "auto";
+        //   }, 150);
+        // }, 5);
       }
     });
   };
@@ -59,8 +58,9 @@ function Home() {
       console.log("scrolling to", frameList[index], " index", index);
       setTimeout(() => {
         (frameList[index + 1] as HTMLElement).scrollIntoView({
-          behavior: "auto",
+          behavior: "smooth",
           inline: "start",
+          //   block: "nearest",
         });
       }, 150);
     }
@@ -93,15 +93,25 @@ function Home() {
             project is ongoing until May 2025.
           </ProjectBox>
 
-          <ProjectBox title="Project On Web Development">
-            I developed my website using React and TypeScript, with designs
-            created in Figma and Spline. Additionally, I worked on a web app for
-            Hong Kong government cultural programs data in a school group
-            project with React, Node.js, and MongoDB. Both projects emphasized
-            responsive design and seamless UI/UX.
+          <ProjectBox
+            title="Project on Web Development"
+            video={["_K_XSdLdT6c"]}
+            desc={["Command Line Interface Book Fetching System"]}
+          >
+            I developed my personal website using React and TypeScript, with
+            designs created in Figma and Spline. Additionally, I worked on a web
+            application for the Hong Kong government's cultural programs data as
+            part of a school group project, utilizing React, Node.js, and
+            MongoDB. Both projects emphasized responsive design and seamless
+            UI/UX. Lastly, I participated in a group project to develop a book
+            management system using Java and Oracle for the backend.
           </ProjectBox>
 
-          <ProjectBox title="Project On Game Development">
+          <ProjectBox
+            title="Project On Game Development"
+            video={["uNo5nz9zzT0", "8gr3_M5-U9c"]}
+            desc={["STM32 Aircraft Warrior", "NES Bomberman Clone"]}
+          >
             I worked on both software and hardware aspects of game development.
             For hardware, I created a game using a STM32 microcontroller with C,
             focusing on embedded system logic, hardware, and graphics. For
@@ -111,10 +121,10 @@ function Home() {
           </ProjectBox>
 
           <ProjectBox title="More Projects...">
-            There are more projects I have worked on, including book system with
-            Java, text translation app with Python, OpenGL with C++, etc. But,
-            they are not included here. Feel free to watch my GitHub or YouTube
-            Channel for uploaded projects.
+            There are more projects I have worked on, including library system
+            with Java, text translation app with Python, OpenGL with C++, etc.
+            But, they are not included here. Feel free to watch my GitHub or
+            YouTube Channel for uploaded projects.
           </ProjectBox>
         </div>
         <div className="footer-frame">

@@ -14,9 +14,6 @@
     border: 1px solid black;
     border-radius: 3%;
     width: auto;
-    &.macbox-play {
-      margin-left: 3%;
-    }
   }
   .mcontainer {
     position: absolute;
@@ -24,6 +21,10 @@
     height: 100%;
     align-content: center;
     text-align: center;
+    button {
+      width: 75%;
+      margin: 7px;
+    }
   }
   iframe {
     overflow: hidden;

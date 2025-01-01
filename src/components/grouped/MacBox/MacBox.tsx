@@ -1,8 +1,6 @@
 import "./MacBox.scss";
-// import Slider from "../../ui/Slider/Slider";
-import { React, useState } from "react";
+import { useState } from "react";
 import { macbook } from "../../../assets";
-import { static_noise } from "../../../assets";
 
 interface MacBoxProps {
   video?: string[];
@@ -10,8 +8,11 @@ interface MacBoxProps {
 }
 function MacBox({ video, desc }: MacBoxProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [vidx, setVidx] = useState(0);
 
-  const playVideo = () => {
+  const playVideo = (idx: number) => {
+    setVidx(idx);
+    console.log("Playing video", idx, vidx, video?.[vidx]);
     setIsPlaying(true);
   };
 
@@ -30,28 +31,35 @@ function MacBox({ video, desc }: MacBoxProps) {
               No videos available.
               <br />
               Check the photos and code in my{" "}
-              <a href="https://github.com/jeff4121336">GitHub</a> instead!
+              <a href="https://github.com/jeff4121336" target="_blank">
+                GitHub
+              </a>{" "}
+              instead!
             </div>
           ) : isPlaying ? (
             <>
-              {video.map((vid) => (
-                <iframe
-                  src={`https://www.youtube.com/embed/${vid}?rel=0&autoplay=1`}
-                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              ))}
+              <iframe
+                src={`https://www.youtube.com/embed/${video[vidx]}?rel=0&autoplay=1`}
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                key={vidx}
+              ></iframe>
               <button className="macbox-play" onClick={hideVideo}>
-                ▶ Hide Video(s)
+                ▶ Change Video
               </button>
             </>
           ) : (
             <>
               <div className="mcontainer">
-                <div className="macbox-play" onClick={playVideo}>
-                  <button> ▶ Show Video(s) </button> <br />
-                  {desc?.map((d, idx) => `${idx + 1}: ${d}`)}
-                </div>
+                {desc?.map((d, idx) => (
+                  <>
+                    <button key={video[idx]} onClick={() => playVideo(idx)}>
+                      {" "}
+                      ▶ Play {idx + 1}: {d}{" "}
+                    </button>{" "}
+                    <br />
+                  </>
+                ))}
               </div>
             </>
           )}

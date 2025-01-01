@@ -1,6 +1,37 @@
 .macbox-container {
   position: relative;
   max-width: 450px !important;
+  font-size: 0.7em;
+}
+.macbox-container .overlay {
+  position: absolute;
+  top: 47%;
+  text-align: center;
+}
+.macbox-container button {
+  background-color: #fcf2e5;
+  border: 1px solid black;
+  border-radius: 3%;
+  width: auto;
+}
+.macbox-container .mcontainer {
+  position: absolute;
+  display: center;
+  height: 100%;
+  align-content: center;
+  text-align: center;
+}
+.macbox-container .mcontainer button {
+  width: 75%;
+  margin: 7px;
+}
+.macbox-container iframe {
+  overflow: hidden;
+  position: absolute;
+  top: 15%;
+  left: 17%;
+  width: 65%;
+  height: 65%;
 }
 
 .macbox-image {
@@ -10,10 +41,7 @@
      object-fit: fill;
 }
 
-.overlay {
+.sliderClass {
   position: absolute;
-  top: 50%;
-  display: flex;
-  justify-content: center;
-  font-size: 0.7em;
+  top: 10%;
 }/*# sourceMappingURL=MacBox.css.map */

@@ -1,4 +1,6 @@
 import Slider from "../../ui/AnimatedSlider/ASlider";
+import { useRef } from "react";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import "./BentoBox.scss";
 
 import {
@@ -31,6 +33,55 @@ import {
 } from "../../../assets";
 
 function BentoBox() {
+  const row1Ref = useRef<HTMLDivElement>(null);
+  const row2Ref = useRef<HTMLDivElement>(null);
+  const row3Ref = useRef<HTMLDivElement>(null);
+
+  const fadeInOptions1 = {
+    root: null,
+    rootmargin: "0px",
+    boxElement: row1Ref.current,
+  };
+
+  const fadeInOptions2 = {
+    root: null,
+    rootmargin: "0px",
+    boxElement: row2Ref.current,
+  };
+
+  const fadeInOptions3 = {
+    root: null,
+    rootmargin: "0px",
+    boxElement: row3Ref.current,
+  };
+
+  const fadeInCallback: IntersectionObserverCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (
+        entry.isIntersecting &&
+        !entry.target.classList.contains("animate__fadeInUp")
+      ) {
+        entry.target.classList.add("animate__fadeInUp");
+      }
+    });
+  };
+
+  const row1_AnimateRef = useIntersectionObserver(
+    fadeInCallback,
+    fadeInOptions1,
+    0.15
+  );
+  const row2_AnimateRef = useIntersectionObserver(
+    fadeInCallback,
+    fadeInOptions2,
+    0.15
+  );
+  const row3_AnimateRef = useIntersectionObserver(
+    fadeInCallback,
+    fadeInOptions3,
+    0.15
+  );
+
   return (
     <>
       <div className="container-fluid about">
@@ -98,7 +149,10 @@ function BentoBox() {
         </div>
       </div>
       <div className="container-xxl about-desktop">
-        <div className="row pt-5 pb-2">
+        <div
+          className="intro1 row pt-5 pb-2 animate__animated"
+          ref={row1_AnimateRef}
+        >
           <div className="col rectangle">
             <p>
               I’m Jeff. <br /> <br /> Information Engineering Major and Computer
@@ -119,7 +173,10 @@ function BentoBox() {
             </div>
           </div>
         </div>
-        <div className="row pb-2">
+        <div
+          className="intro2 row pb-2 animate__animated"
+          ref={row2_AnimateRef}
+        >
           <div className="col-2 square">
             <div className="flipFlexBox">
               <div className="flipFlexBoxInner">
@@ -158,7 +215,10 @@ function BentoBox() {
             </ul>
           </div>
         </div>
-        <div className="row pb-5">
+        <div
+          className="intro3 row pb-5 animate__animated"
+          ref={row3_AnimateRef}
+        >
           <div className="col rectangle">
             <div className="container slider">
               <div className="row">

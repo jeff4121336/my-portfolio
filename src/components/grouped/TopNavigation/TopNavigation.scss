@@ -46,6 +46,15 @@ $animationTime: 0.45s;
       justify-content: space-evenly;
       align-items: center;
 
+      a {
+        color: $main-text-color;
+        text-decoration: none;
+        &.dark-mode {
+          color: $dark-mode-text-color;
+          transition: color $animationTime;
+        }
+      }
+
       @media (max-width: $tablet-width) {
         margin-left: 0px;
         padding: 0px 4px 0px 0px;

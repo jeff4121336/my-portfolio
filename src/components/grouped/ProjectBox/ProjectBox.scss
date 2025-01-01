@@ -6,6 +6,7 @@
   justify-content: center;
   height: auto;
   min-height: 95vh;
+  padding-top: 20px;
   .text {
     display: flex;
     justify-content: flex-start;
@@ -14,15 +15,17 @@
       color: $main-text-color;
     }
   }
-  .btn {
+  .button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 3vw;
+
     .navMacboxBtn {
       height: 30px;
       width: 30px;
       margin: 0px 10px;
+      font-size: 0.8rem;
       background-color: #fcf2e5;
     }
   }
@@ -46,7 +49,10 @@
         padding-bottom: 5vh;
       }
       .navMacboxBtn {
-        display: none;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        margin: 0px 10px;
       }
     }
   }
@@ -57,6 +63,12 @@
       }
       .sub-text {
         font-size: $sub-text-size-4;
+      }
+      .navMacboxBtn {
+        height: auto;
+        width: auto;
+        text-align: center;
+        font-size: 0.6rem;
       }
     }
   }

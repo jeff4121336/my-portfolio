@@ -4,6 +4,7 @@
   justify-content: center;
   height: auto;
   min-height: 95vh;
+  padding-top: 20px;
 }
 .project .text {
   display: flex;
@@ -13,16 +14,17 @@
   font-size: 36px;
   color: #000000;
 }
-.project .btn {
+.project .button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 3vw;
 }
-.project .btn .navMacboxBtn {
+.project .button .navMacboxBtn {
   height: 30px;
   width: 30px;
   margin: 0px 10px;
+  font-size: 0.8rem;
   background-color: #fcf2e5;
 }
 .project .sub-text {
@@ -43,7 +45,10 @@
     padding-bottom: 5vh;
   }
   .project .row .navMacboxBtn {
-    display: none;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    margin: 0px 10px;
   }
 }
 @media (max-width: 575px) {
@@ -52,5 +57,11 @@
   }
   .project .row .sub-text {
     font-size: 12px;
+  }
+  .project .row .navMacboxBtn {
+    height: auto;
+    width: auto;
+    text-align: center;
+    font-size: 0.6rem;
   }
 }/*# sourceMappingURL=ProjectBox.css.map */

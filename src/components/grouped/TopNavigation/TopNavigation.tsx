@@ -57,7 +57,7 @@ function TopNavigation({ scrollToIndex }: TopNavigationProps) {
                 Project
               </NavButton>
             </div>
-            <div onClick={() => scrollToIndex(5)}>
+            <div onClick={() => scrollToIndex(3)}>
               <NavButton
                 color={color}
                 bgColor={bgColor}
@@ -65,7 +65,7 @@ function TopNavigation({ scrollToIndex }: TopNavigationProps) {
                 width={width}
                 height={height}
               >
-                Contact
+                <a href="mailto:jeffyau36@gmail.com">Contact</a>
               </NavButton>
             </div>
           </div>

@@ -25,4 +25,4 @@ export { default as tech_18_mongodb } from "./images/mongodb.png";
 export { default as tech_19_opengl } from "./images/opengl.png";
 export { default as tech_20_docker } from "./images/docker.png";
 export { default as macbook } from "./images/macbook.png";
-export { default as static_noise } from "./video/TV_static.mp4";
+export { default as avatar } from "./images/Avatar.png";
