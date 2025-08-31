@@ -81,21 +81,17 @@ function Home() {
         </div>
         <div className="frame project-frame">
           <ProjectBox
-            title="Project On AI Job Scraping with LLM analysis"
+            title="Project On AI Job Scraping with LLM Analysis"
             video={[]}
-            desc={["RNA Analysis"]}
+            desc={["Job Data Analysis"]}
           >
-            This project leverages the previous LLM and CNN deep learning
-            models. It predicts the types of RNA existing in a RNA sequences,
-            achieving 4% better performance than current sota models. As this is
-            a multi-label classification problem, we aim to perform good in all
-            classes, especially the rare classes. The improved loss function,
-            average the loss contribution by weight in data, helps the model to
-            achieve better performance across all classes, including the
-            minorities. Details:{" "}
-            <a href="https://drive.google.com/drive/folders/1vcAjPIn5R4CyZcPMDahko9SzwWRrnH2R?usp=drive_link">
-              {"Learn More"}
-            </a>
+            This project uses the open-source tool Crawl4AI with Groq to set up
+            the DeepSeek model, which is designed to enhance search results
+            through LLM processing and extract useful data from real-time job
+            listings. It can scrape job data from Google Jobs, and after LLM
+            analysis, the data is saved in MongoDB. A web app built with React
+            displays the data and allows users to fetch more job details. This
+            project is nearly finished, and further polish will be applied.
           </ProjectBox>
 
           <ProjectBox
@@ -103,14 +99,15 @@ function Home() {
             video={[]}
             desc={["RNA Analysis"]}
           >
-            This project leverages the previous LLM and CNN deep learning
-            models. It predicts the types of RNA existing in a RNA sequences,
-            achieving 4% better performance than current sota models. As this is
-            a multi-label classification problem, we aim to perform good in all
-            classes, especially the rare classes. The improved loss function,
-            average the loss contribution by weight in data, helps the model to
-            achieve better performance across all classes, including the
-            minorities. Details:{" "}
+            This project builds upon previous LLM and CNN deep learning models.
+            The new parallel mechanism adopted into the model, it predicts the
+            types of RNA present in RNA sequences, achieving 4% better
+            performance than current SOTA models. As this is a multi-label
+            classification problem, our goal is to perform well across all
+            classes, especially the rare ones. The improved loss function, which
+            averages the loss contribution by data weight, helps the model
+            achieve better performance across all classes, including minorities.
+            Details:{" "}
             <a href="https://drive.google.com/drive/folders/1vcAjPIn5R4CyZcPMDahko9SzwWRrnH2R?usp=drive_link">
               {"Learn More"}
             </a>
@@ -123,10 +120,10 @@ function Home() {
           >
             This project combines LLM and CNN deep learning models to analyze
             RNA types and content. It predicts 14 types of RNA with 97% accuracy
-            and an 85% F1 score, surpassing some current sota models.
-            Additionally, it provides bar charts and prediction scores as
-            annotations to help users understand the results. This final year
-            project is ongoing until May 2025.
+            and an 85% F1 score, surpassing some current sota models in this
+            single-class classification problem. Additionally, it provides bar
+            charts and prediction scores as annotations to help users understand
+            the results. This final year project is ongoing until May 2025.
           </ProjectBox>
 
           <ProjectBox
