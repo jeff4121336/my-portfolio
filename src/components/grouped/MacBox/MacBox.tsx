@@ -28,7 +28,7 @@ function MacBox({ video, desc }: MacBoxProps) {
           {video == null ? (
             <div className="overlay">
               {" "}
-              No videos available.
+              No videos available. It will be uploaded soon.
               <br />
               Check the photos and code in my{" "}
               <a href="https://github.com/jeff4121336" target="_blank">

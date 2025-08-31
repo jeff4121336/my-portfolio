@@ -81,7 +81,43 @@ function Home() {
         </div>
         <div className="frame project-frame">
           <ProjectBox
-            title="Project On Bioinformatics & AI"
+            title="Project On AI Job Scraping with LLM analysis"
+            video={[]}
+            desc={["RNA Analysis"]}
+          >
+            This project leverages the previous LLM and CNN deep learning
+            models. It predicts the types of RNA existing in a RNA sequences,
+            achieving 4% better performance than current sota models. As this is
+            a multi-label classification problem, we aim to perform good in all
+            classes, especially the rare classes. The improved loss function,
+            average the loss contribution by weight in data, helps the model to
+            achieve better performance across all classes, including the
+            minorities. Details:{" "}
+            <a href="https://drive.google.com/drive/folders/1vcAjPIn5R4CyZcPMDahko9SzwWRrnH2R?usp=drive_link">
+              {"Learn More"}
+            </a>
+          </ProjectBox>
+
+          <ProjectBox
+            title="Project On Bioinformatics & AI (2)"
+            video={[]}
+            desc={["RNA Analysis"]}
+          >
+            This project leverages the previous LLM and CNN deep learning
+            models. It predicts the types of RNA existing in a RNA sequences,
+            achieving 4% better performance than current sota models. As this is
+            a multi-label classification problem, we aim to perform good in all
+            classes, especially the rare classes. The improved loss function,
+            average the loss contribution by weight in data, helps the model to
+            achieve better performance across all classes, including the
+            minorities. Details:{" "}
+            <a href="https://drive.google.com/drive/folders/1vcAjPIn5R4CyZcPMDahko9SzwWRrnH2R?usp=drive_link">
+              {"Learn More"}
+            </a>
+          </ProjectBox>
+
+          <ProjectBox
+            title="Project On Bioinformatics & AI (1)"
             video={["QZ2RmchYzSA"]}
             desc={["RNA Analysis"]}
           >

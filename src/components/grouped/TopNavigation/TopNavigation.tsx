@@ -20,7 +20,7 @@ function TopNavigation({ scrollToIndex }: TopNavigationProps) {
               <div className="main-text"> Jeff's Website </div>
             </div>
             <div className="row">
-              <div className="sub-text"> A Final Year Student </div>
+              <div className="sub-text"> Recently Graduated </div>
             </div>
           </div>
           <div className="col btn-column">

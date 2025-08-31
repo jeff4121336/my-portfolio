@@ -119,7 +119,6 @@ function BentoBox() {
                     tech_05_jquery,
                     tech_06_php,
                     tech_07_python,
-                    tech_08_anaconda,
                     tech_09_github,
                     tech_10_figma,
                   ]}
@@ -132,8 +131,7 @@ function BentoBox() {
                   height="60px"
                   images={[
                     tech_11_c,
-                    tech_12_cplusplus,
-                    tech_13_csharp,
+                    tech_08_anaconda,
                     tech_14_java,
                     tech_15_aws,
                     tech_16_ubuntu,

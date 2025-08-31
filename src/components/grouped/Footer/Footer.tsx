@@ -39,7 +39,7 @@ function Footer() {
           </div>
         </div>
         <div className="row text-row">
-          All rights reserved. © Copyright Jeff Yau 2024
+          All rights reserved. © Copyright Jeff Yau 2025
         </div>
       </div>
     </>
